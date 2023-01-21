@@ -4,8 +4,8 @@
 </script>
 
 <main class="scroll">
-	<Nav />
 	<FollowView>
+		<Nav />
 		<slot />
 	</FollowView>
 </main>

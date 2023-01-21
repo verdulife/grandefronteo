@@ -3,7 +3,7 @@ import { writable } from 'svelte/store';
 export const routes = writable([
 	{
 		title: 'Laitmotiv',
-		href: '#laitmotiv',
+		href: '#welcome',
 		active: true
 	},
 	{

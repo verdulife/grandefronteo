@@ -4,7 +4,7 @@
 	import NextIcon from '$lib/icons/NextIcon.svelte';
 </script>
 
-<nav class="col fcenter xfill">
+<nav class="col fcenter">
 	<ul class="row jbetween xfill">
 		{#each $routes as { title, href, active }}
 			<li class="row">
@@ -30,8 +30,17 @@
 		position: fixed;
 		bottom: 0;
 		left: 0;
-		z-index: 98;
+		right: 0;
+		width: 90%;
+		opacity: 0;
+		margin: 0 auto;
 		padding: 2em;
+		z-index: 98;
+		transition: 200ms;
+
+		&:hover {
+			opacity: 1;
+		}
 	}
 
 	ul {
