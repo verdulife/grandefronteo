@@ -14,8 +14,6 @@
 			e.stopPropagation();
 			let deviceX, deviceY;
 
-			console.log(e);
-
 			if (e.accelerationIncludingGravity) {
 				deviceX = e.accelerationIncludingGravity.x;
 				deviceY = e.accelerationIncludingGravity.y;
@@ -38,10 +36,10 @@
 </script>
 
 <VideoBackground src="/noise.mp4" />
-<div id="tunel" class="viewport" />
+<div id="tunel" class="full" />
 
 <div id="follow">
-	<div class="scroll">
+	<div class="scrollbar">
 		<slot />
 	</div>
 </div>

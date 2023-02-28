@@ -5,4 +5,3 @@
 
 <Welcome />
 <Sinopsis />
-<Welcome />

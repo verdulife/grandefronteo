@@ -2,8 +2,8 @@
 	export let src;
 </script>
 
-<picture class="fill">
-	<video class="fill" {src} playsinline autoplay muted loop />
+<picture class="full">
+	<video class="full" {src} playsinline autoplay muted loop />
 </picture>
 
 <style lang="postcss">

@@ -5,7 +5,7 @@
 </script>
 
 <nav class="col fcenter">
-	<ul class="row jbetween xfill">
+	<ul class="row jbetween wfull">
 		{#each $routes as { title, href, active }}
 			<li class="row">
 				<a class:active {href}>{title}</a>
@@ -13,9 +13,9 @@
 		{/each}
 	</ul>
 
-	<progress class="xfill" value="10" max="100" />
+	<progress class="wfull" value="10" max="100" />
 
-	<div class="row xfill">
+	<div class="row wfull">
 		<div class="icon play">
 			<PlayIcon width="20" height="20" fill="#fff" />
 		</div>
@@ -32,15 +32,10 @@
 		left: 0;
 		right: 0;
 		width: 90%;
-		opacity: 0;
 		margin: 0 auto;
 		padding: 2em;
 		z-index: 98;
-		transition: 200ms;
-
-		&:hover {
-			opacity: 1;
-		}
+		opacity: 0;
 	}
 
 	ul {
