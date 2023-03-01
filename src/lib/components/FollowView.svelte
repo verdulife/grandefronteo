@@ -7,8 +7,7 @@
 		const { width, height } = document.body.getBoundingClientRect();
 		const halfWidth = width / 2;
 		const halfHeight = height / 2;
-		const move_threshold = 30;
-		const rotation_threshold = 6;
+		const move_threshold = 20;
 
 		function setFollow(e) {
 			e.stopPropagation();
@@ -22,12 +21,10 @@
 				deviceY = e.pageY;
 			}
 
-			const moveX = ((deviceX - halfWidth) / halfWidth) * move_threshold * -1;
-			const moveY = ((deviceY - halfHeight) / halfHeight) * move_threshold * -1;
-			const rotationX = ((deviceX - halfWidth) / halfWidth) * rotation_threshold;
-			const rotationY = ((deviceY - halfHeight) / halfHeight) * rotation_threshold;
+			const moveX = ((deviceX - halfWidth) / halfWidth) * move_threshold;
+			const moveY = ((deviceY - halfHeight) / halfHeight) * move_threshold;
 
-			followEl.style.transform = `translateX(${moveX}px) translateY(${moveY}px) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+			followEl.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
 		}
 
 		followEl.addEventListener('mousemove', setFollow);
@@ -51,7 +48,6 @@
 		left: -5%;
 		width: 110%;
 		height: 110%;
-		perspective: 1000px;
 		backface-visibility: hidden;
 		mix-blend-mode: screen;
 	}
@@ -63,5 +59,9 @@
 		background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.6));
 		pointer-events: none;
 		z-index: 99;
+	}
+
+	.scrollbar {
+		padding: 5%;
 	}
 </style>

@@ -1,31 +1,75 @@
 <script>
+	import { onMount } from 'svelte';
+
+	export let size = 8;
+
 	const grande = ['✌', '👌', '💸', '🦄', '🐥', '👊', '⭐', '☘️', '⏱️', '📸', '🎖️', '🎃'];
 	const fronteo = ['🤑', '😱', '🙃', '🤣', '😎', '🤬', '🤮', '🥳', '💩', '👻', '☠️', '🙊', '🐽'];
 
-	$: ind = 0;
+	$: grandeInd = 0;
+	$: fronteoInd = 0;
 
 	setInterval(() => {
-		if (ind >= grande.length - 1) ind = 0;
-		else ind++;
+		if (grandeInd >= grande.length - 1) grandeInd = 0;
+		else grandeInd++;
+
+		setTimeout(() => {
+			if (fronteoInd >= fronteo.length - 1) fronteoInd = 0;
+			else fronteoInd++;
+		}, 250);
 	}, 500);
+
+	onMount(() => {
+		document.querySelector('span').style.setProperty('--size', size + 'vw');
+	});
 </script>
 
 <span class="col">
-	<div><b>#</b>GR{grande[ind]}NDE</div>
-	<div>FR{fronteo[ind]}NTEO</div>
+	<div class="row">
+		<b class="start">#</b>
+		<b>G</b>
+		<b>R</b>
+		<strong>{grande[grandeInd]}</strong>
+		<b>N</b>
+		<b>D</b>
+		<b>E</b>
+	</div>
+	<div class="row">
+		<b>F</b>
+		<b>R</b>
+		<strong>{fronteo[fronteoInd]}</strong>
+		<b>N</b>
+		<b>T</b>
+		<b>E</b>
+		<b>O</b>
+	</div>
 </span>
 
 <style lang="postcss">
 	span {
-		font-family: var(--font-title);
-		font-size: 8vw;
-		line-height: 1;
+		--size: 8vw;
 
-		& div:first-of-type {
-			letter-spacing: 2px;
+		font-family: var(--font-title);
+		font-size: var(--size);
+
+		& div:last-of-type {
+			margin-top: calc(var(--size) / 1.6 - ((var(--size) / 1.6) * 2));
+			letter-spacing: calc(var(--size) / 2 / 10);
 		}
 
-		& b {
+		& b,
+		& strong {
+			display: inline-flex;
+			justify-content: center;
+			z-index: 1;
+		}
+
+		& strong {
+			width: 1.3ch;
+			z-index: 0;
+		}
+
+		& .start {
 			color: var(--accent);
 		}
 	}
