@@ -30,7 +30,7 @@
 		<b>G</b>
 		<b>R</b>
 		<strong>{grande[grandeInd]}</strong>
-		<b>N</b>
+		<b class="inverted">N</b>
 		<b>D</b>
 		<b>E</b>
 	</div>
@@ -38,7 +38,7 @@
 		<b>F</b>
 		<b>R</b>
 		<strong>{fronteo[fronteoInd]}</strong>
-		<b>N</b>
+		<b class="inverted">N</b>
 		<b>T</b>
 		<b>E</b>
 		<b>O</b>
@@ -71,6 +71,10 @@
 
 		& .start {
 			color: var(--accent);
+		}
+
+		& .inverted {
+			transform: rotateY(180deg);
 		}
 	}
 </style>

@@ -1,7 +1,7 @@
 <script>
 	import Welcome from '$lib/sections/Welcome.svelte';
-	import Sinopsis from '$lib/sections/Sinopsis.svelte';
+	import Transmedia from '$lib/sections/Transmedia.svelte';
 </script>
 
 <Welcome />
-<Sinopsis />
+<Transmedia />

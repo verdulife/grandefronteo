@@ -3,7 +3,7 @@
 </script>
 
 <section id="welcome" class="col acenter wfull">
-	<LogoLive size="8" />
+	<LogoLive size="7" />
 
 	<p class="tcenter">
 		Tomás y Jonathan han encontrado una billetera de criptomonedas, pero no saben de quién es. Así
@@ -19,7 +19,7 @@
 <style lang="postcss">
 	section {
 		gap: 2em;
-		padding: clamp(170px, 10%, 12%) 2em;
+		padding: clamp(120px, 4%, 6%) 2em;
 	}
 
 	p {
