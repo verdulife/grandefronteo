@@ -14,11 +14,6 @@ body {
 	--color: var(--base-900);
 	--border-radius: 0.75em;
 
-	@media (--dark) {
-		--background: var(--base-900);
-		--color: var(--base);
-	}
-
 	@media (--sm) {
 		--border-radius: 0.5em;
 	}
@@ -27,11 +22,6 @@ body {
 ::selection {
 	--background-color: var(--base-800);
 	--color: var(--base-100);
-
-	@media (--dark) {
-		--background-color: var(--base-100);
-		--color: var(--base-800);
-	}
 }
 
 /* ⚡ startcss reset ⚡ */

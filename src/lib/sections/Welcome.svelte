@@ -23,6 +23,7 @@
 	}
 
 	p {
+		color: var(--base);
 		max-width: var(--media-lg);
 		font-size: var(--font-md);
 	}
@@ -32,6 +33,10 @@
 
 		& a {
 			min-width: 200px;
+
+			&.unset {
+				color: var(--base);
+			}
 		}
 	}
 </style>

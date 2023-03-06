@@ -13,10 +13,6 @@
 
 :--heading {
 	color: var(--base-900);
-
-	@media (--dark) {
-		--color: var(--base);
-	}
 }
 
 /* ⚡ startcss reset ⚡ */

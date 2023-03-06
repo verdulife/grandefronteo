@@ -13,10 +13,6 @@
 
 :--text {
 	--color: var(--base-800);
-
-	@media (--dark) {
-		--color: var(--base-100);
-	}
 }
 
 /* ⚡ startcss reset ⚡ */

@@ -46,11 +46,22 @@
 		</p>
 
 		<footer class="col wfull">
-			<div class="comment row">
-				<Image />
-				<aside>
-					<small class="name">Ibai</small>
-					<small class="message">De locos! Cuándo sale?</small>
+			<div class="comments row">
+				<picture avatar>
+					<Image src="/ibai.png" />
+				</picture>
+				<aside class="col">
+					<small><b>Ibai</b></small>
+					<small>De locos! Cuándo sale?</small>
+				</aside>
+			</div>
+
+			<div class="new-comment row wfull">
+				<picture avatar>
+					<Image src="/alec.jpg" />
+				</picture>
+				<aside class="col grow">
+					<small class="wfull">Escribe un comentario...</small>
 				</aside>
 			</div>
 		</footer>
@@ -59,12 +70,13 @@
 
 <style lang="postcss">
 	article {
-		width: 100%;
+		width: calc(100% - 4em);
 		max-width: var(--media-md);
 		background-color: var(--base);
 		border-radius: 1em;
-    margin-top: 4%;
+		margin-top: clamp(200px, 10%, 10%);
 		overflow: hidden;
+		z-index: 1;
 	}
 
 	header {
@@ -72,7 +84,6 @@
 
 		& h2 {
 			font-family: var(--font-title);
-			color: var(--base-900);
 		}
 
 		& aside {
@@ -100,6 +111,7 @@
 
 			& h1 {
 				position: relative;
+				color: var(--base);
 				font-family: var(--font-title);
 				line-height: 1;
 				z-index: 1;
@@ -109,30 +121,61 @@
 		& .like {
 			gap: 0.5em;
 			padding: 1em;
-      
+
 			& p {
-        font-size: var(--font-xs);
+				font-size: var(--font-xs);
 				color: var(--base-500);
 			}
 		}
-    
+
 		& .buttons {
-      height: 60px;
+			height: 60px;
 			border-top: 1px solid var(--base-200);
 			border-bottom: 1px solid var(--base-200);
-      
+
 			& .fake-btn {
-				color: var(--base-900);
-        
 				&:first-of-type {
-          border-right: 1px solid var(--base-200);
+					border-right: 1px solid var(--base-200);
 				}
 			}
 		}
-    
+
 		& p {
-      color: var(--base-900);
-      padding: 1em;
+			padding: 1em;
+		}
+
+		& footer {
+			gap: 0.5em;
+			border-top: 1px solid var(--base-200);
+			padding: 1em;
+
+			& .comments {
+				gap: 0.5em;
+
+				& picture {
+					width: 36px;
+				}
+
+				& aside {
+					background-color: var(--base-100);
+					border-radius: 0.5em;
+					padding: 0.75em;
+				}
+			}
+
+			& .new-comment {
+				gap: 0.5em;
+
+				& picture {
+					width: 36px;
+				}
+
+				& aside {
+					background-color: var(--base-100);
+					border-radius: 0.5em;
+					padding: 0.75em;
+				}
+			}
 		}
 	}
 </style>

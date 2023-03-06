@@ -49,6 +49,7 @@
 	span {
 		--size: 8vw;
 
+		color: var(--base);
 		font-family: var(--font-title);
 		font-size: var(--size);
 
