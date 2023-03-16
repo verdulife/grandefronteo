@@ -56,7 +56,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.6));
+		background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.4));
 		pointer-events: none;
 		z-index: 99;
 	}

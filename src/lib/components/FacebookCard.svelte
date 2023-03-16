@@ -37,7 +37,7 @@
 
 		<p>
 			Grande Fronteo es un proyecto pensado para formato de serie. Donde la audiencia puede
-			interactuar directamente con los personajes ficticios que aparecen, a tazravés de las redes
+			interactuar directamente con los personajes ficticios que aparecen, a través de las redes
 			sociales.
 			<br /><br />
 			A su vez, personas reales, del mundo del stream y de redes sociales, aparecen en la série interpretándose
@@ -119,7 +119,6 @@
 		}
 
 		& .like {
-			gap: 0.5em;
 			padding: 1em;
 
 			& p {
