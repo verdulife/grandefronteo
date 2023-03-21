@@ -3,27 +3,25 @@
 
 	const stories = [
 		{
-			background: 'instagram.jpg',
-			text: 'Los protagonistas no encuentran al dueño de la wallet. Por lo que deciden que sea él quien los encuentre a ellos.',
-			position: 'top'
+			background: 'mads.gif',
+			text: 'Los protagonistas no encuentran al dueño de la wallet. Por lo que deciden que sea él quien los encuentre a ellos.'
 		},
 		{
-			background: 'instagram.jpg',
-			text: 'Los protagonistas no encuentran al dueño de la wallet. Por lo que deciden que sea él quien los encuentre a ellos.',
-			position: 'top'
+			background: 'glasses.gif',
+			text: 'Los protagonistas no encuentran al dueño de la wallet. Por lo que deciden que sea él quien los encuentre a ellos.'
 		},
 		{
-			background: 'instagram.jpg',
-			text: 'Los protagonistas no encuentran al dueño de la wallet. Por lo que deciden que sea él quien los encuentre a ellos.',
-			position: 'bottom'
+			background: 'hello.gif',
+			text: 'Los protagonistas no encuentran al dueño de la wallet. Por lo que deciden que sea él quien los encuentre a ellos.'
 		},
 		{
-			background: 'instagram.jpg',
-			text: 'Los protagonistas no encuentran al dueño de la wallet. Por lo que deciden que sea él quien los encuentre a ellos.',
-			position: 'bottom'
+			background: 'mind.gif',
+			text: 'Los protagonistas no encuentran al dueño de la wallet. Por lo que deciden que sea él quien los encuentre a ellos.'
 		}
 	];
 </script>
+
+<h2><b>RESUMINEDO</b></h2>
 
 <ul class="scrollbar" horizontal>
 	{#each stories as story}
@@ -34,6 +32,12 @@
 </ul>
 
 <style>
+	h2 {
+		color: var(--base);
+		font-size: 20vh;
+		margin-bottom: -0.75em;
+	}
+
 	ul {
 		padding: 4em;
 	}

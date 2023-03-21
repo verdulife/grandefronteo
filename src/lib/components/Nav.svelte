@@ -1,22 +1,38 @@
 <script>
 	import { routes } from '$lib/stores';
 	import Logo from '$lib/icons/Logo.svelte';
+	import { onMount } from 'svelte';
+
+	let scrolled = false;
+
+	onMount(() => {
+		const scroll = document.querySelector('.scrollbar');
+
+		scroll.addEventListener('scroll', (e) => {
+			const { scrollTop } = e.target;
+
+			if (scrollTop > 100) scrolled = true;
+			else scrolled = false;
+		});
+	});
 </script>
 
-<nav class="row jbetween acenter wfull">
-	<a href="/">
-		<picture class="row fcenter">
-			<Logo width="100%" />
-		</picture>
-	</a>
+<nav class="row fcenter wfull" class:scrolled>
+	<main class="row jbetween acenter wfull">
+		<a href="/">
+			<picture class="row fcenter">
+				<Logo width="100%" />
+			</picture>
+		</a>
 
-	<ul class="row">
-		{#each $routes as { title, href, active }}
-			<li class="row">
-				<a class="row fcenter" class:active {href}>{title}</a>
-			</li>
-		{/each}
-	</ul>
+		<ul class="row">
+			{#each $routes as { title, href, active }}
+				<li class="row">
+					<a class="row fcenter" class:active {href}>{title}</a>
+				</li>
+			{/each}
+		</ul>
+	</main>
 </nav>
 
 <style lang="postcss">
@@ -25,10 +41,13 @@
 		top: 5%;
 		left: 0;
 		right: 0;
-		max-width: var(--media-xl);
-		margin: 0 auto;
 		padding: 2em;
 		z-index: 98;
+		transition: 150ms;
+
+		& main {
+			max-width: var(--media-xl);
+		}
 
 		& picture {
 			width: 150px;
@@ -37,6 +56,12 @@
 				width: 100px;
 			}
 		}
+	}
+
+	.scrolled {
+		background-color: hsl(var(--base-900-hsl), 0.6);
+		backdrop-filter: blur(10px);
+		padding: 1em 2em;
 	}
 
 	ul {
