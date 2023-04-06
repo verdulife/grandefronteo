@@ -1,36 +1,62 @@
 <script>
 	import Image from '$lib/components/Image.svelte';
+	import PlayIcon from '$lib/icons/PlayIcon.svelte';
 
-	export let story;
-	const { background, text, top } = story;
+	export let story, prev, next;
+	const { background, text } = story;
+	$: pending = story.pending;
+	let videoEl;
+
+	$: if (!pending) videoEl?.play();
+	else videoEl?.pause();
 </script>
 
-<article class="col" style="background-image: url({background})">
+<article class="col full">
+	<picture class="full">
+		<video bind:this={videoEl} class="full" src={background} playsinline loop muted />
+	</picture>
+
 	<header class="row wfull">
 		<h5>🤑 grandefronteo</h5>
 	</header>
 
-	<main class="col jend full">
-		<p>{text}</p>
-	</main>
+	{#if !pending}
+		<main class="col jend full">
+			<p>{text}</p>
+		</main>
 
-	<footer class="row acenter wfull">
-		<small class="wfull">Enviar mensaje</small>
-		<Image />
-		<Image />
-	</footer>
+		<footer class="row acenter wfull">
+			<small class="wfull">Enviar mensaje</small>
+			<Image />
+			<Image />
+		</footer>
+
+		<button class="prev unset row fcenter" on:click={prev}>
+			<PlayIcon width="15px" height="15px" />
+		</button>
+
+		<button class="next unset row fcenter" on:click={next}>
+			<PlayIcon width="15px" height="15px" />
+		</button>
+	{/if}
 </article>
 
 <style lang="postcss">
 	article {
-		width: 500px;
-		max-width: 80%;
-		aspect-ratio: 9/16;
+		position: relative;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 		border-radius: 1em;
-		overflow: hidden;
+
+		& * {
+			z-index: 1;
+		}
+	}
+
+	picture {
+		position: absolute;
+		z-index: 0;
 	}
 
 	header {
@@ -84,6 +110,25 @@
 			border: 1px solid var(--base);
 			border-radius: 4em;
 			padding: 1em;
+		}
+	}
+
+	button.unset {
+		position: absolute;
+		top: 50%;
+		width: 30px;
+		height: 30px;
+		background-color: var(--base-400);
+		border-radius: 50%;
+
+		&.prev {
+			left: -40px;
+			transform: translateY(-50%) rotate(180deg);
+		}
+
+		&.next {
+			right: -40px;
+			transform: translateY(-50%);
 		}
 	}
 </style>
