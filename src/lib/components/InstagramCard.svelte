@@ -4,7 +4,7 @@
 
 <article class="row wfull">
 	<picture class="w1/2">
-		<Image src="/instagram.jpg" alt="Sinopsis" />
+		<Image width="100%" src="/instagram.jpg" alt="Sinopsis" />
 	</picture>
 
 	<aside class="col jbetween w1/2">
@@ -18,8 +18,8 @@
 					target="_blank"
 					rel="noreferrer"
 				>
-					#homeless
-				</a>.
+					#homeless</a
+				>.
 				<br /><br />
 				Por p🤬ta casualidad, encuentran una wallet de bitcoins (o vete tú a saber de qué), pero está
 				protegida por huella dactilar y no pueden acceder.

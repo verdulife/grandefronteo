@@ -1,4 +1,5 @@
 <script>
+	import { scale } from 'svelte/transition';
 	import StoriesCard from '$lib/components/StoriesCard.svelte';
 
 	$: stories = [
@@ -23,18 +24,18 @@
 			pending: true
 		}
 	];
+
 	let slider;
 
 	function prev() {
 		const current = stories.find((s) => s.pending === false);
 		const currIndex = stories.indexOf(current);
 
-		stories[currIndex].pending = true;
-
 		if (stories[currIndex - 1]) {
+			stories[currIndex].pending = true;
 			stories[currIndex - 1].pending = false;
 			slider.scrollBy({
-				left: -1,
+				left: -100,
 				behavior: 'smooth'
 			});
 		}
@@ -44,12 +45,12 @@
 		const current = stories.find((s) => s.pending === false);
 		const currIndex = stories.indexOf(current);
 
-		stories[currIndex].pending = true;
+		if (stories[currIndex + 1] !== undefined) {
+			stories[currIndex].pending = true;
 
-		if (stories[currIndex + 1]) {
 			stories[currIndex + 1].pending = false;
 			slider.scrollBy({
-				left: 1,
+				left: 100,
 				behavior: 'smooth'
 			});
 		}
@@ -74,17 +75,23 @@
 	}
 
 	ul {
+		min-height: 100vh;
 		padding: 4em;
 
 		& li {
-			width: 350px;
-			max-width: 80%;
+			width: 400px;
+			max-width: 100%;
 			aspect-ratio: 9/16;
-			margin: 0 2em;
+			margin: 0 2em 4em 2em;
 			scroll-snap-align: center !important;
+			transition: 250ms;
 
 			&:first-of-type {
-				margin-left: 38%;
+				margin-left: 50%;
+			}
+
+			&:last-of-type {
+				margin-right: 50%;
 			}
 
 			&.pending {
