@@ -11,15 +11,10 @@
 
 		function setFollow(e) {
 			e.stopPropagation();
-			let deviceX, deviceY;
+			if (e.accelerationIncludingGravity) return;
 
-			if (e.accelerationIncludingGravity) {
-				deviceX = e.accelerationIncludingGravity.x;
-				deviceY = e.accelerationIncludingGravity.y;
-			} else {
-				deviceX = e.pageX;
-				deviceY = e.pageY;
-			}
+			let deviceX = e.pageX;
+			let deviceY = e.pageY;
 
 			const moveX = ((deviceX - halfWidth) / halfWidth) * move_threshold;
 			const moveY = ((deviceY - halfHeight) / halfHeight) * move_threshold;
@@ -28,7 +23,6 @@
 		}
 
 		followEl.addEventListener('mousemove', setFollow);
-		window.addEventListener('devicemotion', setFollow, true);
 	});
 </script>
 
@@ -44,10 +38,10 @@
 <style>
 	#follow {
 		position: fixed;
-		top: -5%;
-		left: -5%;
-		width: 110%;
-		height: 110%;
+		top: -10%;
+		left: -10%;
+		width: 120%;
+		height: 120%;
 		backface-visibility: hidden;
 		mix-blend-mode: screen;
 	}

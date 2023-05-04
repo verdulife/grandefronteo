@@ -2,7 +2,7 @@
 	import Image from '$lib/components/Image.svelte';
 </script>
 
-<article class="row wfull">
+<article class="row wfull col@md">
 	<picture class="w1/2">
 		<Image width="100%" src="/instagram.jpg" alt="Sinopsis" />
 	</picture>

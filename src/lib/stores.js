@@ -2,28 +2,28 @@ import { writable } from 'svelte/store';
 
 export const routes = writable([
 	{
-		title: 'Laitmotiv',
-		href: '#welcome',
+		title: '👋 Hola',
+		href: '/#welcome',
 		active: true
 	},
 	{
+		title: '¿Trans que?',
+		href: '/#transmedia',
+		active: false
+	},
+	{
 		title: 'Sinopsis',
-		href: '#sinopsis',
+		href: '/#sinopsis',
 		active: false
 	},
 	{
-		title: 'Personajes',
-		href: '#personajes',
-		active: false
-	},
-	{
-		title: 'Referencias',
-		href: '#referencias',
+		title: 'Guión',
+		href: '/#guion',
 		active: false
 	},
 	{
 		title: 'Contacto',
-		href: '#contacto',
+		href: '/#contacto',
 		active: false
 	}
 ]);

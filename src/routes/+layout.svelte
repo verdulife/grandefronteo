@@ -4,7 +4,8 @@
 	import Nav from '$lib/components/Nav.svelte';
 </script>
 
+<Nav />
+
 <FollowView>
-	<Nav />
 	<slot />
 </FollowView>

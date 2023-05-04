@@ -11,15 +11,19 @@
 	</p>
 
 	<footer class="row col@sm fcenter wfull">
-		<a role="button" class="w2/3@sm" href="/">LEER GUIÓN</a>
-		<a role="button" class="unset w2/3@sm" href="/">CONTACTO</a>
+		<a role="button" class="w2/3@sm" href="/#guion">LEER GUIÓN</a>
+		<a role="button" class="unset w2/3@sm" href="/#contacto">CONTACTO</a>
 	</footer>
 </section>
 
 <style lang="postcss">
 	section {
 		gap: 2em;
-		padding: clamp(120px, 4%, 6%) 2em;
+		padding: 10% 2em;
+		
+		@media (max-width: 600px) {
+			padding-top: 50%;
+		}
 	}
 
 	p {

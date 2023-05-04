@@ -28,7 +28,7 @@
 		<ul class="row">
 			{#each $routes as { title, href, active }}
 				<li class="row">
-					<a class="row fcenter" class:active {href}>{title}</a>
+					<a class="row fcenter" {href}>{title}</a>
 				</li>
 			{/each}
 		</ul>
@@ -38,7 +38,7 @@
 <style lang="postcss">
 	nav {
 		position: fixed;
-		top: 5%;
+		top: 0;
 		left: 0;
 		right: 0;
 		padding: 2em;
@@ -92,8 +92,7 @@
 				transition: 150ms;
 			}
 
-			&:hover:before,
-			&.active:before {
+			&:hover:before {
 				right: 0;
 				opacity: 1;
 				transform: rotate(-1deg);

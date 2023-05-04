@@ -50,6 +50,7 @@
 
 			& li {
 				position: relative;
+				max-width: 100%;
 				background-color: var(--base-700);
 				padding: 1em 2em;
 
