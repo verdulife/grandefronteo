@@ -9,16 +9,41 @@
 		</header>
 
 		<main class="row wfull">
-			<span>🤑</span>
+			<picture avatar>
+				<Image src="/alec.jpg" />
+			</picture>
 
 			<aside class="col wfull">
-				<h3>Grande Fronteo <span>@grandefronte · 5h</span></h3>
+				<h3>
+					Alec Hernández
+					<br />
+					<span>@AlecHernandezC</span>
+				</h3>
+
+				<p>Ojalá en 2023 hagamos un proyecto grande de ficción o empecemos una película.</p>
+
+				<footer>
+					<p>6:30 p. m. · 31 dic. 2022 · <b>406,2 mil</b> Reproducciones</p>
+				</footer>
+			</aside>
+		</main>
+
+		<main class="row wfull">
+			<picture avatar>
+				<Image src="/profile.svg" />
+			</picture>
+
+			<aside class="col wfull">
+				<h3>Grande Fronteo <span>@grandefronteo · Ahora</span></h3>
 
 				<p>
-					Si el proyecto te ha parecido interesante y quieres saber más, no dudes en ponerte en
-					contacto conmigo en: <a href="mailto:roberto.v.lopez@gmail.com" rel="noopener"
-						>roberto.v.lopez@gmail.com</a
-					> ¡Gracias por tu tiempo!
+					Cuando quieras!
+					<br />
+					Si el proyecto te ha parecido interesante y quieres saber más, no dudes en ponerte en contacto
+					conmigo en:
+					<a href="mailto:roberto.v.lopez@gmail.com" rel="noopener">roberto.v.lopez@gmail.com</a> ¡Gracias
+					por tu tiempo!
+					<br><br>
 				</p>
 
 				<picture class="col fcenter wfull">
@@ -76,8 +101,16 @@
 		gap: 1em;
 		padding: 2em;
 
-		& > span {
-			font-size: 3em;
+		&:last-of-type {
+			border-top: 1px solid var(--base-800);
+
+			& aside {
+				gap: 0;
+			}
+		}
+
+		& > picture {
+			width: 70px;
 		}
 
 		& aside {
@@ -90,6 +123,7 @@
 		}
 
 		& h3 {
+			font-size: var(--font-md);
 			color: var(--base);
 
 			& span {
@@ -101,7 +135,19 @@
 			color: var(--base);
 
 			& a {
-				color: var(--info);
+				color: var(--accent)
+			}
+		}
+
+		& footer {
+			& p {
+				color: var(--base-400);
+			}
+
+			& b {
+				color: var(--base);
+				font-family: 'inter';
+				font-weight: bold;
 			}
 		}
 	}

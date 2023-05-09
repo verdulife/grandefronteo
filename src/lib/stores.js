@@ -7,7 +7,7 @@ export const routes = writable([
 		active: true
 	},
 	{
-		title: '¿Trans que?',
+		title: '¿Trans qué?',
 		href: '/#transmedia',
 		active: false
 	},

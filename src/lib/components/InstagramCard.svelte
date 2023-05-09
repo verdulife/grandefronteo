@@ -2,16 +2,23 @@
 	import Image from '$lib/components/Image.svelte';
 </script>
 
-<article class="row wfull col@md">
-	<picture class="w1/2">
+<article id="sinopsis" class="row wfull col@md">
+	<picture class="w1/2 wfull@md">
 		<Image width="100%" src="/instagram.jpg" alt="Sinopsis" />
 	</picture>
 
-	<aside class="col jbetween w1/2">
+	<aside class="col jbetween w1/2 wfull@md">
 		<header class="col wfull">
-			<h2><b>🤑 Sinopsis</b></h2>
+			<h2 class="row acenter">
+				<picture avatar>
+					<Image src="profile.svg" />
+				</picture>
+
+				<b>Sinopsis</b>
+			</h2>
+
 			<p>
-				A Tomás y a Jonathan los acaban de echar del piso de su abuela, donde vivían del free.
+				A Tomás y a Jonathan los acaban de echar del piso de su difunta abuela, donde vivían del free.
 				Necesitan conseguir 20k para pagar el impuesto de sucesiones y tienen 6 meses para
 				conseguirlo. Así que ahora mismo están <a
 					href="https://www.instagram.com/explore/tags/homeless/"
@@ -84,6 +91,14 @@
 
 			& header {
 				padding: 2em;
+
+				& h2 {
+					gap: 0.5em;
+				}
+
+				& picture {
+					width: 50px;
+				}
 
 				& p {
 					margin-top: 1em;

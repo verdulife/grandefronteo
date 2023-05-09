@@ -11,7 +11,6 @@
 
 		function setFollow(e) {
 			e.stopPropagation();
-			if (e.accelerationIncludingGravity) return;
 
 			let deviceX = e.pageX;
 			let deviceY = e.pageY;
@@ -22,7 +21,7 @@
 			followEl.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
 		}
 
-		followEl.addEventListener('mousemove', setFollow);
+		if (!'ontouchstart' in window) followEl.addEventListener('mousemove', setFollow);
 	});
 </script>
 

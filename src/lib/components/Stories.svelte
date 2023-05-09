@@ -10,17 +10,17 @@
 		},
 		{
 			background: 'well.mp4',
-			text: 'Los protagonistas no encuentran al dueño de la wallet. Por lo que deciden que sea él quien los encuentre a ellos.',
+			text: 'Para ello, tratarán de hacerse virales en redes sociales para llamar su atención.',
 			pending: true
 		},
 		{
 			background: 'paquita.mp4',
-			text: 'Los protagonistas no encuentran al dueño de la wallet. Por lo que deciden que sea él quien los encuentre a ellos.',
+			text: 'Durante el transcurso de su aventura, se irán topando con diferentes influencers, streamers y demás personas conocidas por el público, e intentarán hacer colaboraciones con ellos (cameos a lo Paquita Salas).',
 			pending: true
 		},
 		{
 			background: 'mind.mp4',
-			text: 'Los protagonistas no encuentran al dueño de la wallet. Por lo que deciden que sea él quien los encuentre a ellos.',
+			text: 'Esas colaboraciones serán subidas en los canales reales de youtube, twitch, instagram, etc. Fusionando el mundo real con el ficticio de #grandefronteo',
 			pending: true
 		}
 	];

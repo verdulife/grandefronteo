@@ -27,14 +27,14 @@
 			<li class="col wfull">
 				<button class="unset col fcenter" on:click={() => subCredit(5)}>
 					<h3 class="row fcenter wfull">5</h3>
-					<p>Desbloquea una página del guión</p>
+					<p>Desbloquea la gráfica merch</p>
 				</button>
 			</li>
 
 			<li class="col wfull">
 				<button class="unset col fcenter" on:click={() => subCredit(10)}>
 					<h3 class="row fcenter wfull">10</h3>
-					<p>Desbloquea un resumen del pitloto</p>
+					<p>Desbloquea el video teaser</p>
 				</button>
 			</li>
 
