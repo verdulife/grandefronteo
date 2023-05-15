@@ -18,8 +18,8 @@
 			</h2>
 
 			<p>
-				A Tomás y a Jonathan los acaban de echar del piso de su difunta abuela, donde vivían del free.
-				Necesitan conseguir 20k para pagar el impuesto de sucesiones y tienen 6 meses para
+				A Tomás y a Jonathan los acaban de echar del piso de su difunta abuela, donde vivían del
+				free. Necesitan conseguir 20k para pagar el impuesto de sucesiones y tienen 6 meses para
 				conseguirlo. Así que ahora mismo están <a
 					href="https://www.instagram.com/explore/tags/homeless/"
 					target="_blank"
@@ -56,12 +56,12 @@
 
 		<div class="actions row jbetween acenter wfull">
 			<div class="row acenter">
-				<Image />
-				<Image />
-				<Image />
+				<img width="30px" height="30px" src="/like.svg" alt="Like" />
+				<img width="34px" height="34px" src="/comment.svg" alt="Comment" />
+				<img width="26px" height="26px" src="/send.svg" alt="Send" />
 			</div>
-
-			<Image />
+			
+			<img width="34px" height="34px" src="/save.svg" alt="save" />
 		</div>
 
 		<div class="comment row jbetween acenter wfull">
@@ -112,6 +112,10 @@
 			& .actions {
 				border-top: 1px solid var(--base-300);
 				padding: 1em 2em;
+
+				& > div {
+					gap: 1em;
+				}
 			}
 
 			& .comment {
