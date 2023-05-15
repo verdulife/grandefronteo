@@ -25,9 +25,9 @@
 			</picture>
 		</a>
 
-		<ul class="row">
+		<ul class="row acenter">
 			{#each $routes as { title, href, active }}
-				<li class="row">
+				<li class="row fcenter">
 					<a class="row fcenter" {href}>{title}</a>
 				</li>
 			{/each}

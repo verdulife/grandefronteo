@@ -1,5 +1,15 @@
 <script>
 	import Image from '$lib/components/Image.svelte';
+	import PlayIcon from '$lib/icons/PlayIcon.svelte';
+	import PauseIcon from '$lib/icons/PauseIcon.svelte';
+
+	let ibaiDuration,
+		ibaiTime,
+		ibaiPaused = true;
+
+	let auronDuration,
+		auronTime,
+		auronPaused = true;
 </script>
 
 <article class="col acenter wfull">
@@ -9,7 +19,7 @@
 		</li>
 
 		<li class="row right">
-			<p>Tengo un guión</p>
+			<p>El guión de 6 episodios</p>
 		</li>
 
 		<li class="row right img">
@@ -19,11 +29,45 @@
 		</li>
 
 		<li class="row left">
-			<p>Es muy largo?</p>
+			<p>Como de largos?</p>
 		</li>
 
 		<li class="row right">
-			<p>Unas 40 pág.</p>
+			<p>Unas 35-40 pág.</p>
+		</li>
+
+		<li class="row fcenter right voice">
+			<audio
+				src="/ibai.mp3"
+				bind:currentTime={ibaiTime}
+				bind:duration={ibaiDuration}
+				bind:paused={ibaiPaused}
+			/>
+			<button class="unset" on:click={() => (ibaiPaused = !ibaiPaused)}>
+				{#if ibaiPaused}
+					<PlayIcon width="20px" fill="#fff" />
+				{:else}
+					<PauseIcon width="20px" fill="#fff" />
+				{/if}
+			</button>
+			<input type="range" min="0" max={ibaiDuration} value={ibaiTime || 0} step="0.01" />
+		</li>
+
+		<li class="row fcenter right voice">
+			<audio
+				src="/auron.mp3"
+				bind:currentTime={auronTime}
+				bind:duration={auronDuration}
+				bind:paused={auronPaused}
+			/>
+			<button class="unset" on:click={() => (auronPaused = !auronPaused)}>
+				{#if auronPaused}
+					<PlayIcon width="20px" fill="#fff" />
+				{:else}
+					<PauseIcon width="20px" fill="#fff" />
+				{/if}
+			</button>
+			<input type="range" min="0" max={auronDuration} value={auronTime || 0} step="0.01" />
 		</li>
 
 		<li class="row left">
@@ -98,13 +142,17 @@
 				}
 			}
 
-      & .img {
-        padding: 0.5em;
+			& .voice {
+				gap: 1em;
+			}
 
-        & picture {
-          border-radius: 0.5em;
-        }
-      }
+			& .img {
+				padding: 0.5em;
+
+				& picture {
+					border-radius: 0.5em;
+				}
+			}
 		}
 	}
 </style>

@@ -17,30 +17,51 @@
 		<header class="row jbetween acenter wfull">
 			<aside class="row acenter">
 				<h2>Tu saldo</h2>
-				<span>{credit}</span>
+				<span class="row fcenter">
+					<img width="20px" src="/coin.svg" alt="Saldo" />
+					{credit}
+				</span>
 			</aside>
 
-			<button class="unset" on:click={() => addCredit(5)}>Añadir saldo</button>
+			<button class="unset" on:click={() => addCredit(5)}>+ saldo</button>
 		</header>
 
 		<ul class="row jcenter wfull">
 			<li class="col wfull">
 				<button class="unset col fcenter" on:click={() => subCredit(5)}>
-					<h3 class="row fcenter wfull">5</h3>
-					<p>Desbloquea la gráfica merch</p>
+					<h3 class="col fcenter wfull">
+						<img width="60px" height="60px" src="/merch.svg" alt="Descargar merch" />
+						<span class="row fcenter">
+							<img width="20px" src="/coin.svg" alt="Saldo" />
+							5
+						</span>
+					</h3>
+					<p>Desbloquear el merchandising</p>
 				</button>
 			</li>
 
 			<li class="col wfull">
 				<button class="unset col fcenter" on:click={() => subCredit(10)}>
-					<h3 class="row fcenter wfull">10</h3>
+					<h3 class="col fcenter wfull">
+						<img width="60px" height="60px" src="/teaser.svg" alt="Descargar teaser" />
+						<span class="row fcenter">
+							<img width="20px" src="/coin.svg" alt="Saldo" />
+							10
+						</span>
+					</h3>
 					<p>Desbloquea el video teaser</p>
 				</button>
 			</li>
 
 			<li class="col wfull">
 				<button class="unset col fcenter" on:click={() => subCredit(20)}>
-					<h3 class="row fcenter wfull">20</h3>
+					<h3 class="col fcenter wfull">
+						<img width="60px" height="60px" src="/piloto.svg" alt="Descargar piloto" />
+						<span class="row fcenter">
+							<img width="20px" src="/coin.svg" alt="Saldo" />
+							20
+						</span>
+					</h3>
 					<p>Desbloquea el guión del piloto</p>
 				</button>
 			</li>
@@ -70,6 +91,7 @@
 
 		& span {
 			cursor: pointer;
+			gap: 0.25em;
 			background-color: var(--base-200);
 			border-radius: 0.5em;
 			padding: 0.5em 1em;
@@ -88,9 +110,22 @@
 
 			& h3 {
 				aspect-ratio: 1;
+				gap: 0.25em;
 				background-color: #00e5cb;
 				color: var(--base);
 				border-radius: 0.5em;
+				
+				& img {
+					object-fit: contain;
+				}
+				
+				& span {
+					gap: 0.25em;
+					color: var(--base);
+					background-color: hsl(var(--base-600-hsl), 0.5);
+					border-radius: 0.5em;
+					padding: 2px 10px;
+				}
 			}
 
 			&:first-of-type h3 {

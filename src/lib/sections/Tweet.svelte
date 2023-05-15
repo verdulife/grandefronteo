@@ -41,9 +41,9 @@
 					<br />
 					Si el proyecto te ha parecido interesante y quieres saber más, no dudes en ponerte en contacto
 					conmigo en:
-					<a href="mailto:roberto.v.lopez@gmail.com" rel="noopener">roberto.v.lopez@gmail.com</a> ¡Gracias
-					por tu tiempo!
-					<br><br>
+					<a href="mailto:roberto.v.lopez@gmail.com" rel="noopener">roberto.v.lopez@gmail.com</a>
+					¡Gracias por tu tiempo!
+					<br /><br />
 				</p>
 
 				<picture class="col fcenter wfull">
@@ -119,6 +119,7 @@
 			& picture {
 				aspect-ratio: 1;
 				border-radius: 1em;
+				margin-bottom: 2em;
 			}
 		}
 
@@ -135,7 +136,7 @@
 			color: var(--base);
 
 			& a {
-				color: var(--accent)
+				color: var(--accent);
 			}
 		}
 
