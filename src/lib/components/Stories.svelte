@@ -61,7 +61,7 @@
 
 <ul bind:this={slider} class="scrollbar snap" horizontal>
 	{#each stories as story}
-		<li class="col" class:pending={story.pending}>
+		<li class="col acenter">
 			<StoriesCard bind:story {next} {prev} />
 		</li>
 	{/each}
@@ -75,16 +75,13 @@
 	}
 
 	ul {
-		min-height: 100vh;
 		padding: 4em;
 
 		& li {
 			width: 400px;
-			max-width: 100%;
 			aspect-ratio: 9/16;
-			margin: 0 2em 4em 2em;
+			margin-bottom: 4em;
 			scroll-snap-align: center !important;
-			transition: 250ms;
 
 			&:first-of-type {
 				margin-left: 50%;
@@ -92,12 +89,6 @@
 
 			&:last-of-type {
 				margin-right: 50%;
-			}
-
-			&.pending {
-				width: 200px;
-				max-width: 65%;
-				transform: translateY(150px);
 			}
 		}
 	}

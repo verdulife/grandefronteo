@@ -7,36 +7,11 @@
 	$: pending = story.pending;
 	let videoEl;
 
-	const lineLength = Math.round(text.length / 4);
-
-	function customSplit(str, maxLength) {
-		if (str.length <= maxLength) return str;
-
-		const words = str.split(' ');
-		let lines = [];
-		let line = '';
-		let lineIndex = 0;
-
-		words.forEach((w) => {
-			if (line.length <= maxLength) {
-				line += `${w} `;
-				lines[lineIndex] = line;
-			} else {
-				lineIndex++;
-				line = '';
-			}
-		});
-
-		return lines;
-	}
-
-	const lines = customSplit(text, lineLength);
-
 	$: if (!pending) videoEl?.play();
 	else videoEl?.pause();
 </script>
 
-<article class="col full">
+<article class="col" class:pending={story.pending}>
 	<picture class="full">
 		<video bind:this={videoEl} class="full" src={background} playsinline loop muted />
 	</picture>
@@ -47,16 +22,14 @@
 
 	{#if !pending}
 		<main class="col jend acenter full">
-			{#each lines as line}
-				<p>{line}</p>
-			{/each}
+			<p>{text}</p>
 		</main>
 
-		<!-- <footer class="row acenter wfull">
+		<footer class="row acenter wfull">
 			<small class="wfull">Enviar mensaje</small>
 			<Image />
 			<Image />
-		</footer> -->
+		</footer>
 
 		<button class="prev unset row fcenter" on:click={prev}>
 			<PlayIcon width="10px" height="10px" />
@@ -71,12 +44,22 @@
 <style lang="postcss">
 	article {
 		position: relative;
+		width: 400px;
+		max-width: 100%;
+		aspect-ratio: 9/16;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+		transition: 250ms;
 
 		& * {
 			z-index: 1;
+		}
+
+		&.pending {
+			width: 200px;
+			max-width: 65%;
+			transform: translateY(150px);
 		}
 	}
 
@@ -103,6 +86,7 @@
 			background-color: var(--accent);
 			text-align: center;
 			color: white;
+			border-radius: 0.5em;
 			padding: 0 0.25em;
 		}
 	}
