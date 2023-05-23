@@ -52,11 +52,11 @@
 			{/each}
 		</main>
 
-		<footer class="row acenter wfull">
+		<!-- <footer class="row acenter wfull">
 			<small class="wfull">Enviar mensaje</small>
 			<Image />
 			<Image />
-		</footer>
+		</footer> -->
 
 		<button class="prev unset row fcenter" on:click={prev}>
 			<PlayIcon width="10px" height="10px" />
