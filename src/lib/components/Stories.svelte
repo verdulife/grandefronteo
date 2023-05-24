@@ -70,7 +70,7 @@
 <style lang="postcss">
 	h2 {
 		color: var(--base);
-		font-size: 20vh;
+		font-size: clamp(60px, 20vw, 15vw);
 		margin-bottom: -0.75em;
 	}
 
@@ -79,6 +79,7 @@
 
 		& li {
 			width: 400px;
+			max-width: 100%;
 			aspect-ratio: 9/16;
 			margin-bottom: 4em;
 			scroll-snap-align: center !important;

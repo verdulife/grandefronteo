@@ -10,6 +10,48 @@
 		credit -= n;
 		credit = credit <= 0 ? 0 : credit;
 	}
+
+	function openMerch() {
+		if (credit < 5) {
+			alert('No tienes suficientes creditos. Añade más saldo');
+			return;
+		}
+
+		const link = document.createElement('a');
+		link.href = '/grande-fronteo_merch.pdf';
+		link.target = '_blank';
+
+		link.click();
+		subCredit(5);
+	}
+
+	function openTeaser() {
+		if (credit < 10) {
+			alert('No tienes suficientes creditos. Añade más saldo');
+			return;
+		}
+
+		const link = document.createElement('a');
+		link.href = '/grande-fronteo_teaser.mp4';
+		link.target = '_blank';
+
+		link.click();
+		subCredit(10);
+	}
+
+	function openPilot() {
+		if (credit < 20) {
+			alert('No tienes suficientes creditos. Añade más saldo');
+			return;
+		}
+
+		const link = document.createElement('a');
+		link.href = '/grande-fronteo_piloto.pdf';
+		link.target = '_blank';
+
+		link.click();
+		subCredit(20);
+	}
 </script>
 
 <section id="guion" class="col fcenter wfull">
@@ -28,7 +70,7 @@
 
 		<ul class="row jcenter wfull">
 			<li class="col wfull">
-				<button class="unset col fcenter" on:click={() => subCredit(5)}>
+				<button class="unset col fcenter" on:click={openMerch}>
 					<h3 class="col fcenter wfull">
 						<img width="60px" height="60px" src="/merch.svg" alt="Descargar merch" />
 						<span class="row fcenter">
@@ -41,7 +83,7 @@
 			</li>
 
 			<li class="col wfull">
-				<button class="unset col fcenter" on:click={() => subCredit(10)}>
+				<button class="unset col fcenter" on:click={openTeaser}>
 					<h3 class="col fcenter wfull">
 						<img width="60px" height="60px" src="/teaser.svg" alt="Descargar teaser" />
 						<span class="row fcenter">
@@ -54,7 +96,7 @@
 			</li>
 
 			<li class="col wfull">
-				<button class="unset col fcenter" on:click={() => subCredit(20)}>
+				<button class="unset col fcenter" on:click={openPilot}>
 					<h3 class="col fcenter wfull">
 						<img width="60px" height="60px" src="/piloto.svg" alt="Descargar piloto" />
 						<span class="row fcenter">
@@ -114,11 +156,11 @@
 				background-color: #00e5cb;
 				color: var(--base);
 				border-radius: 0.5em;
-				
+
 				& img {
 					object-fit: contain;
 				}
-				
+
 				& span {
 					gap: 0.25em;
 					color: var(--base);
