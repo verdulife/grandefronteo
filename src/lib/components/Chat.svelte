@@ -19,7 +19,7 @@
 		</li>
 
 		<li class="row right">
-			<p>El guión de 6 episodios</p>
+			<p>Una temporada de 8 episodios</p>
 		</li>
 
 		<li class="row right img">

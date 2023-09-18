@@ -8,8 +8,8 @@
 			<h2>Tweet</h2>
 		</header>
 
-		<main class="row wfull">
-			<picture avatar>
+		<!--<main class="row wfull">
+			 <picture avatar>
 				<Image src="/alec.jpg" />
 			</picture>
 
@@ -26,7 +26,8 @@
 					<p>6:30 p. m. · 31 dic. 2022 · <b>406,2 mil</b> Reproducciones</p>
 				</footer>
 			</aside>
-		</main>
+			
+		</main>-->
 
 		<main class="row wfull">
 			<picture avatar>
@@ -37,12 +38,10 @@
 				<h3>Grande Fronteo <span>@grandefronteo · Ahora</span></h3>
 
 				<p>
-					Cuando quieras!
-					<br />
-					Si el proyecto te ha parecido interesante y quieres saber más, no dudes en ponerte en contacto
+					Si el proyecto os ha parecido interesante y queréis saber más, no dudéis en poneros en contacto
 					conmigo en:
 					<a href="mailto:roberto.v.lopez@gmail.com" rel="noopener">roberto.v.lopez@gmail.com</a>
-					¡Gracias por tu tiempo!
+					¡Gracias por vuestro tiempo!
 					<br /><br />
 				</p>
 

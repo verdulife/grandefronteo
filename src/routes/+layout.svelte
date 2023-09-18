@@ -6,6 +6,4 @@
 
 <Nav />
 
-<FollowView>
 	<slot />
-</FollowView>
